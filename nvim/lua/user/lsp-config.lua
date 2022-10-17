@@ -55,7 +55,7 @@ local lsp_flags = {
   debounce_text_changes = 150,
 }
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 util = require "lspconfig/util"
 require 'lspconfig'.gopls.setup {
   on_attach = on_attach,
@@ -176,4 +176,4 @@ local function goto_definition(split_cmd)
   return handler
 end
 
-vim.lsp.handlers["textDocument/definition"] = goto_definition(--[[ 'split' ]])
+vim.lsp.handlers["textDocument/definition"] = goto_definition(--[[ 'split' ]] )

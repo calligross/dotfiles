@@ -2,8 +2,8 @@
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
-require("user.options")
 require("plugins")
+require("user.options")
 
 require("user.bufferline")
 require("user.comment")

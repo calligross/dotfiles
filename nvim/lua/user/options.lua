@@ -28,7 +28,8 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-vim.cmd [[colorscheme dracula]]
+-- vim.cmd [[colorscheme dracula]]
+vim.cmd [[colorscheme carbonfox]]
 vim.cmd [[let mapleader=";"]]
 
 local mapOpts = {
