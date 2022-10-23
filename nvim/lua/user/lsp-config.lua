@@ -56,7 +56,7 @@ local lsp_flags = {
 }
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-util = require "lspconfig/util"
+local util = require "lspconfig/util"
 require 'lspconfig'.gopls.setup {
   on_attach = on_attach,
   flags = lsp_flags,
@@ -74,7 +74,7 @@ require 'lspconfig'.gopls.setup {
 }
 
 -- Imports
-function go_org_imports(wait_ms)
+local function go_org_imports(wait_ms)
   local params = vim.lsp.util.make_range_params()
   params.context = { only = { "source.organizeImports" } }
   local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
@@ -111,6 +111,7 @@ require 'lspconfig'.sumneko_lua.setup {
       workspace = {
         -- Make the server aware of Neovim runtime files
         library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
       },
       -- Do not send telemetry data containing a randomized but unique identifier
       telemetry = {
