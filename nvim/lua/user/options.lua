@@ -29,7 +29,7 @@ for k, v in pairs(options) do
 end
 
 -- vim.cmd [[colorscheme dracula]]
-vim.cmd [[colorscheme carbonfox]]
+-- vim.cmd [[colorscheme carbonfox]]
 vim.cmd [[let mapleader=";"]]
 
 local mapOpts = {
