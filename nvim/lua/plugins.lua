@@ -3,6 +3,16 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'Mofiqul/dracula.nvim'
   use "EdenEast/nightfox.nvim"
+  use {
+    "catppuccin/nvim",
+    as = "catppuccin",
+    config = function()
+      require("catppuccin").setup {
+        flavour = "macchiato" -- mocha, macchiato, frappe, latte
+      }
+      vim.api.nvim_command "colorscheme catppuccin"
+    end
+  }
 
   use {
     'nvim-lualine/lualine.nvim',
