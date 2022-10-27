@@ -8,6 +8,8 @@ vim.api.nvim_set_keymap("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.
   , { noremap = true })
 
 local widgets = require('dap.ui.widgets')
+require('dap.ext.vscode').load_launchjs()
+
 vim.keymap.set('n', '<leader>s', function() widgets.centered_float(widgets.scopes) end, {})
 
 local dap, dapui = require("dap"), require("dapui")
