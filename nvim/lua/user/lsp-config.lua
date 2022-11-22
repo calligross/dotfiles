@@ -75,6 +75,8 @@ require 'lspconfig'.gopls.setup {
   },
 }
 
+require 'lspconfig'.svelte.setup {}
+
 -- Imports
 local function go_org_imports(wait_ms)
   local params = vim.lsp.util.make_range_params()
