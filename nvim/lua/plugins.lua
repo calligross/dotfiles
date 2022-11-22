@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
 
   use 'neovim/nvim-lspconfig'
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   -- Auto-Completion
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
