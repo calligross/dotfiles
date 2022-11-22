@@ -45,7 +45,7 @@ vim.keymap.set('n', "x", '"_x')
 vim.keymap.set('n', '<leader>d', ':bdelete<cr>', mapOpts)
 
 vim.api.nvim_create_autocmd("InsertLeave", {
-  pattern = { "*.go", "*.lua" },
+  pattern = { "*.go", "*.lua", "*.svelte" },
   callback = function()
     vim.lsp.buf.format({ async = true })
   end
