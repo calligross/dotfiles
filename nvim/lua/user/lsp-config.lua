@@ -100,7 +100,7 @@ end
 vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.go" }, callback = GoBeforeWrite })
 
 -- lua
-require 'lspconfig'.sumneko_lua.setup {
+require 'lspconfig'.lua_ls.setup {
   on_attach = on_attach,
   settings = {
     Lua = {
@@ -132,13 +132,13 @@ vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335
 
 local border = {
   { "🭽", "FloatBorder" },
-  { "▔", "FloatBorder" },
+  { "▔",  "FloatBorder" },
   { "🭾", "FloatBorder" },
-  { "▕", "FloatBorder" },
+  { "▕",  "FloatBorder" },
   { "🭿", "FloatBorder" },
-  { "▁", "FloatBorder" },
+  { "▁",  "FloatBorder" },
   { "🭼", "FloatBorder" },
-  { "▏", "FloatBorder" },
+  { "▏",  "FloatBorder" },
 }
 
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
@@ -181,4 +181,4 @@ local function goto_definition(split_cmd)
   return handler
 end
 
-vim.lsp.handlers["textDocument/definition"] = goto_definition(--[[ 'split' ]] )
+vim.lsp.handlers["textDocument/definition"] = goto_definition( --[[ 'split' ]])
