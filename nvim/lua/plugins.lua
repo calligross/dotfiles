@@ -39,9 +39,10 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'hrsh7th/cmp-nvim-lsp-document-symbol'
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+  use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-buffer'
-  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-  use 'L3MON4D3/LuaSnip' -- Snippets plugin
+  use 'saadparwaiz1/cmp_luasnip'     -- Snippets source for nvim-cmp
+  use 'L3MON4D3/LuaSnip'             -- Snippets plugin
   use 'rafamadriz/friendly-snippets' -- collection of snippets for various languages
 
   -- Auto Brackets
@@ -87,7 +88,5 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   } ]]
-
   use 'christoomey/vim-tmux-navigator'
-
 end)
