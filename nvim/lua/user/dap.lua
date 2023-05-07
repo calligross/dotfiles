@@ -5,7 +5,7 @@ vim.api.nvim_set_keymap("n", "<F7>", ":lua require'dap'.step_into()<CR>", { nore
 vim.api.nvim_set_keymap("n", "<F8>", ":lua require'dap'.step_out()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoing condition: '))<CR>"
-  , { noremap = true })
+, { noremap = true })
 
 local widgets = require('dap.ui.widgets')
 
@@ -14,6 +14,7 @@ vim.keymap.set('n', '<leader>s', function() widgets.centered_float(widgets.scope
 local dap, dapui = require("dap"), require("dapui")
 dap.listeners.after.event_initialized["dapui_config"] = function()
   -- dapui.open()
+  dap.repl.open()
 end
 dap.listeners.before.event_terminated["dapui_config"] = function()
   dapui.close()
