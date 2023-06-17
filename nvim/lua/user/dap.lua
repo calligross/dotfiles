@@ -14,7 +14,7 @@ vim.keymap.set('n', '<leader>s', function() widgets.centered_float(widgets.scope
 local dap, dapui = require("dap"), require("dapui")
 dap.listeners.after.event_initialized["dapui_config"] = function()
   -- dapui.open()
-  dap.repl.open()
+  dap.repl.open({ height = 5 })
 end
 dap.listeners.before.event_terminated["dapui_config"] = function()
   dapui.close()
