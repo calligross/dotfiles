@@ -20,6 +20,7 @@ local fb = require("telescope").load_extension("file_browser")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "fr", builtin.resume, {})
+vim.keymap.set("n", "<space>fr", builtin.lsp_references, {})
 vim.keymap.set("n", "ff", builtin.find_files, {})
 vim.keymap.set("n", "fd", function()
 	builtin.diagnostics({ initial_mode = "normal" })
